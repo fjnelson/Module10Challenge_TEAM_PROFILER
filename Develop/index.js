@@ -150,7 +150,7 @@ function internMember() {
                 if (answer !== "") {
                     return true;
                 }
-                return "Enter a name.";;
+                return "Enter a name.";
             }
         },
         {
