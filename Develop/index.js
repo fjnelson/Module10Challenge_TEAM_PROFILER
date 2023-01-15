@@ -81,7 +81,7 @@ function addTeamMember() {
                 internMember();
                 break;
             default:
-                generateHTML();
+                generatePage();
         }
     });
 }
@@ -194,3 +194,13 @@ function internMember() {
         addTeam();
     });
 }
+    function generatePage() {
+
+        if (!fs.existsSync(DIST_DIR)) {
+            fs.mkdirSync(DIST_DIR)
+        }
+        console.log("Created team page");
+        fs.writeFileSync(outputPath, render(teamArr), "utf-8");
+    }
+
+    addManager();
