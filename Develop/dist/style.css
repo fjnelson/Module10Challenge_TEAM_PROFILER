@@ -1,0 +1,6 @@
+:root {
+    --cardBackground: lightcoral;
+}
+.jumbotron, .manager-card, .engineer-card, .intern-card{
+    background-color: var(--cardBackground);
+}
