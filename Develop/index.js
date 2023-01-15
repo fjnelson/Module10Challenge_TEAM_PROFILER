@@ -8,26 +8,50 @@ const manager = require('./lib/manager');
 const engineer = require('./lib/engineer');
 const intern = require('./lib/intern');
 
-const startQuestions = [
+const managerQuestions = [
         {
           type: "input",
           message: "What is the manager's name?",
           name: "managerName",
+          validate: name => {
+            if (name !== "") {
+                return true;
+            }
+            return "Enter in a name.";
+        }
         },
         {
             type: "input",
             message: "What is the manager's employee ID?",
             name: "managerID",
+            validate: name => {
+                if (name !== "") {
+                    return true;
+                }
+                return "Enter in an ID.";
+            }
           },
           {
             type: "input",
             message: "What is the manager's email address?",
             name: "managerEmail",
+            validate: name => {
+                if (name !== "") {
+                    return true;
+                }
+                return "Enter in an email.";
+            }
           },
           {
             type: "input",
             message: "What is the manager's office number?",
             name: "managerOffice",
+            validate: name => {
+                if (name !== "") {
+                    return true;
+                }
+                return "Enter in a office number.";
+            }
           }
     ];
 
