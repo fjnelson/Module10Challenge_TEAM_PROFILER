@@ -123,7 +123,7 @@ function engineerMember() {
         },
         {
             type: "input",
-            name: "engineerGithub",
+            name: "engineerUsername",
             message: "What's the engineer's GitHub username?",
             validate: answer => {
                 if (answer !== "") {
@@ -133,8 +133,8 @@ function engineerMember() {
             }
         }
     ]).then(answers => {
-        const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
-        teamArr.push(engineer);
+        const newEngineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerUsername);
+        teamArr.push(newEngineer);
         idArr.push(answers.engineerId);
         addTeam();
     });
@@ -188,26 +188,9 @@ function internMember() {
         }
 
     ]).then(answers => {
-        const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
-        teamArr.push(intern);
+        const newIntern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+        teamArr.push(newIntern);
         idArr.push(answers.internId);
         addTeam();
     });
 }
-//     function writeToFile(teamData, data) {
-//         fs.writeFile(teamData, data, function (err) {
-//           if (err) {
-//             console.log(err);
-//           } else {
-//             console.log("created team data");
-//           }
-//         });
-//       }
-
-// function startFunction(){
-//     inquirer.prompt(startQuestions).then(function (data) {
-//         writeToFile("./lib/team_page", generateTeam(data));
-//       });
-// }
-
-startFunction();
