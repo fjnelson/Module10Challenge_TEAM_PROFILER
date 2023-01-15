@@ -6,6 +6,7 @@ Bootcamp: Module 10 Challenge <br />
 Object-Oriented Programming Challenge: Team Profile Generator <br />
 Codebase correction that follows accessibility standards so that the site is optimized for search engines
 Uses Inquirer@8.2.4 - https://www.npmjs.com/package/inquirer/v/8.2.4
+Uses Jest@29.3.1 - https://www.npmjs.com/package/jest
 
 ## Table of Contents (Optional)
 
