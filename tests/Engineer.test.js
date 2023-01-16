@@ -17,7 +17,6 @@ test('get github account with getGithub() method', () => {
     expect(e.getGitHub()).toBe(testValue);
 });
 
-// Test if the getRole() value is Engineer
 test('getRole() return Engineer', () => {
     const testValue = 'Engineer';
     const e = new Engineer('Foo', 1, 'engineer@email.com', 'GitHubAccount');
