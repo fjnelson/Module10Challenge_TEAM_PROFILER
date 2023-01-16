@@ -18,14 +18,19 @@ open integrated terminal for index.js and run 'npm i'
 
 ## Usage
 Screenshot of readme creation
-![alt text](placeholder)
+![alt text](./Develop/assets/node-code.JPG)
 
 Video of readme creation
-[Video Demo](placeholder)
+[Video Demo](https://drive.google.com/file/d/1EftTXZKHgQRk72LBOFucOcD_4nnNsrFJ/view)
 
 ## Credits
 
+Ideas of outputs taken from:
+mmeii - Dec 2020
+https://github.com/mmeii/team-profile-generator
 
+sylviaprabudy - July 2020
+https://github.com/sylviaprabudy/team-profile-generator
 
 ## License
 
