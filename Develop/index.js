@@ -11,10 +11,10 @@ const DIST_DIR = path.resolve(__dirname, 'dist')
 const outputPath = path.join(DIST_DIR, 'index.html');
 const render = require('../src/template');
 
-const teamArr = [];
-const idArr = [];
+const createTeamArr = [];
+const createIdArr = [];
 
-function initApp() {
+function initPageCreationApp() {
 
     function startManager() {
         console.log("Team Builder");
@@ -65,8 +65,8 @@ function initApp() {
             }
         ]).then(answers => {
             const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOffice);
-            teamArr.push(manager);
-            idArr.push(answers.managerId);
+            createTeamArr.push(manager);
+            createIdArr.push(answers.managerId);
             addTeamMember();
         });
     }
@@ -145,8 +145,8 @@ function initApp() {
             }
         ]).then(answers => {
             const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerUsername);
-            teamArr.push(engineer);
-            idArr.push(answers.engineerId);
+            createTeamArr.push(engineer);
+            createIdArr.push(answers.engineerId);
             addTeamMember();
         });
     }
@@ -200,8 +200,8 @@ function initApp() {
 
         ]).then(answers => {
             const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
-            teamArr.push(intern);
-            idArr.push(answers.internId);
+            createTeamArr.push(intern);
+            createIdArr.push(answers.internId);
             addTeamMember();
         });
     }
@@ -211,10 +211,10 @@ function initApp() {
             fs.mkdirSync(DIST_DIR)
         }
         console.log("Generating Team Profile.... ");
-        fs.writeFileSync(outputPath, render(teamArr), "utf-8");
+        fs.writeFileSync(outputPath, render(createTeamArr), "utf-8");
     }
 
     startManager();
 }
 
-initApp();
+initPageCreationApp();
