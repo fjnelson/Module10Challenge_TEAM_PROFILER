@@ -1,7 +1,7 @@
 const Employee = require('../lib/employee');
 
 test('creates an employee object', () => {
-    const employee = new Employee('Jason');
+    const employee = new Employee('John');
 });
 
 test('set id with constructor', () => {
@@ -11,13 +11,13 @@ test('set id with constructor', () => {
 });
 
 test('set email with constructor', () => {
-    const testValue = 'employee@email.com';
+    const testValue = 'sample@gmail.com';
     const e = new Employee('Foo', 1, testValue);
     expect(e.email).toBe(testValue);
 });
 
 test('getRole() return Employee', () => {
     const testValue = 'employee';
-    const e = new Employee('Jason', 1, 'employee@email.com');
+    const e = new Employee('John', 1, 'sample@gmail.com');
     expect(e.getRole()).toBe(testValue);
 });
